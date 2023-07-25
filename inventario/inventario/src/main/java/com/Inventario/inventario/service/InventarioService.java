@@ -5,10 +5,11 @@ import com.Inventario.inventario.model.Inventario;
 import java.util.List;
 
 public interface InventarioService {
-     Inventario createItem(Inventario inventario);
+     void createItem(Inventario inventario);
      Inventario getItemById(Integer id);
-     Inventario getItemByName(Inventario inventario);
+     Inventario getItemByName(String name);
      List<Inventario> getAllItems();
-     void updateItem(Integer id, Inventario updatedInventario);
+     Inventario updateItem(Inventario updatedInventario);
+     List<Inventario> invertirOrden();
 
 }
